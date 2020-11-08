@@ -13,12 +13,12 @@ using namespace std;
 */
 
 class Deck {
-public:
-    Deck(istream&, const CardFactory*);
-    Card* draw();
+    public:
+        Deck(istream&, const CardFactory*);
+        Card* draw();
 
     
-protected:
+    protected:
     
 };
 

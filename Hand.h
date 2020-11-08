@@ -11,14 +11,14 @@ using namespace std;
 */
 
 class Hand {
-public:
-    Hand(istream&, const CardFactory*);
-    Hand& operator+=(Card*);
-    Card* play();
-    Card* top();
-    Card* operator[](int);
+    public:
+        Hand(istream&, const CardFactory*);
+        Hand& operator+=(Card*);
+        Card* play();
+        Card* top();
+        Card* operator[](int);
 
-protected:
+    protected:
 
 };
 

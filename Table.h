@@ -13,6 +13,7 @@ class Table {
 		Table(istream&, const CardFactory*);
 		bool win(string&);
 		void printHand(bool);
+
 	protected:
 };
 

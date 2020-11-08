@@ -11,13 +11,13 @@ using namespace std;
 */
 
 class DiscardPile {
-public:
-    DiscardPile(istream&, const CardFactory*);
-    DiscardPile& operator+=(Card*);
-    Card* pickUp();
-    Card* top();
+    public:
+        DiscardPile(istream&, const CardFactory*);
+        DiscardPile& operator+=(Card*);
+        Card* pickUp();
+        Card* top();
 
-protected:
+    protected:
 
 };
 
