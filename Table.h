@@ -13,8 +13,8 @@ class Table {
 		Table(istream&, const CardFactory*);
 		bool win(string&);
 		void printHand(bool);
-
 	protected:
+
 };
 
 Table::Table(istream& in, const CardFactory* set) {

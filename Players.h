@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "CardFactory.h"
 #include "Chain.h"
 

@@ -15,6 +15,8 @@ class TradeArea {
 		bool legal(Card*);
 		Card* trade(string);
 		int numCards();
+	protected:
+
 };
 
 TradeArea::TradeArea(istream& in, const CardFactory* set) {

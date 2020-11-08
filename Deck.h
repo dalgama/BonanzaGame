@@ -16,8 +16,6 @@ class Deck {
     public:
         Deck(istream&, const CardFactory*);
         Card* draw();
-
-    
     protected:
     
 };

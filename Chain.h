@@ -21,7 +21,6 @@ class Chain {
         //template<typename T = Card*>
         //Chain<T>& operator+=(Card*);
         int sell();
-
     protected:
 
 };

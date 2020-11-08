@@ -17,7 +17,6 @@ class Hand {
         Card* play();
         Card* top();
         Card* operator[](int);
-
     protected:
 
 };

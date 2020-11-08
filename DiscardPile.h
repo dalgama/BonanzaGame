@@ -16,7 +16,6 @@ class DiscardPile {
         DiscardPile& operator+=(Card*);
         Card* pickUp();
         Card* top();
-
     protected:
 
 };
