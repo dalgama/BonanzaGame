@@ -33,9 +33,6 @@
     <ClInclude Include="TradeArea.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Coins.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Hand.h">
       <Filter>Header Files</Filter>
     </ClInclude>

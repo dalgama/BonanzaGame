@@ -8,6 +8,7 @@ using namespace std;
 
 class Card {
 	public:
+		int getCardsPerCoin(int);
 		virtual string getName();
 		virtual void print(ostream& out);
 	protected:

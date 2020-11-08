@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -10,8 +12,32 @@ using namespace std;
 
 class Hand {
 public:
-    Hand();
+    Hand(istream&, const CardFactory*);
+    Hand& operator+=(Card*);
+    Card* play();
+    Card* top();
+    Card* operator[](int);
 
-private:
+protected:
 
 };
+
+Hand::Hand(istream&, const CardFactory*) {
+    // TODO: implementation
+}
+
+Hand& Hand::operator+=(Card*) {
+    // TODO: implementation
+}
+
+Card* Hand::play() {
+    // TODO: implementation
+}
+
+Card* Hand::top() {
+    // TODO: implementation
+}
+
+Card* Hand::operator[](int) {
+    // TODO: implementation
+}

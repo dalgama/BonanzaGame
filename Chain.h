@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -11,10 +14,26 @@ using namespace std;
 * Suggestion: we can use a std::vector.
 */
 
-class Chain {
-public:
-    Chain();
 
-private:
+class Chain {
+    public:
+        Chain(istream&, const CardFactory*);
+        //template<typename T = Card*>
+        //Chain<T>& operator+=(Card*);
+        int sell();
+
+    protected:
 
 };
+
+Chain::Chain(istream& in, const CardFactory* set) {
+    // TODO: implementation
+}
+
+int Chain::sell() {
+    // TODO: implementation
+}
+
+//Chain<T>& Chain::operator+=(Card*){
+//    // TODO: insert return statement here
+//}

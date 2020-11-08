@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -11,8 +14,18 @@ using namespace std;
 
 class Deck {
 public:
-    Deck();
+    Deck(istream&, const CardFactory*);
+    Card* draw();
+
     
-private:
+protected:
     
 };
+
+Deck::Deck(istream& in, const CardFactory* set) {
+    // TODO: implementation
+}
+
+Card* Deck::draw() {
+    // TODO: implementation
+}
