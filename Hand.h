@@ -1,4 +1,6 @@
 #include <iostream>
+#include <list> 
+#include <iterator>
 #include "Card.h"
 #include "CardFactory.h"
 
@@ -21,7 +23,7 @@ class Hand {
 
 };
 
-Hand::Hand(istream&, const CardFactory*) {
+Hand::Hand(istream& in, const CardFactory*) {
     // TODO: implementation
 }
 

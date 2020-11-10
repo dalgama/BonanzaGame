@@ -28,7 +28,8 @@ class Player {
 Player::Player(string&) {
 	// TODO: implementation
 }
-Player::Player(istream&, const  CardFactory*) {
+
+Player::Player(istream& in, const  CardFactory*) {
 	// TODO: implementation
 }
 
