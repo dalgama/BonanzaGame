@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -8,9 +11,27 @@ using namespace std;
 */
 
 class DiscardPile {
-public:
-    DiscardPile();
-
-private:
+    public:
+        DiscardPile(istream&, const CardFactory*);
+        DiscardPile& operator+=(Card*);
+        Card* pickUp();
+        Card* top();
+    protected:
 
 };
+
+DiscardPile::DiscardPile(istream& in, const CardFactory* set) {
+    // TODO: implementation
+}
+
+DiscardPile& DiscardPile::operator+=(Card*) {
+    // TODO: implementation
+}
+
+Card* DiscardPile::pickUp() {
+    // TODO: implementation
+}
+
+Card* DiscardPile::top() {
+    // TODO: implementation
+}

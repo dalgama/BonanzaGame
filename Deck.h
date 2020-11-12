@@ -1,4 +1,10 @@
+#pragma once
+#ifndef DECK_H
+#define DECK_H
 #include <iostream>
+#include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -10,9 +16,13 @@ using namespace std;
 */
 
 class Deck {
-public:
-    Deck();
-    
-private:
-    
+    public:
+        Deck(istream&, const CardFactory*);
+        Card* draw();
+        
+    protected:
+        const CardFactory* deck;
+        istream* in;
 };
+
+#endif // DECK_H
