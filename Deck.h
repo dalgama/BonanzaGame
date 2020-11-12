@@ -1,3 +1,6 @@
+#pragma once
+#ifndef DECK_H
+#define DECK_H
 #include <iostream>
 #include <vector>
 #include "Card.h"
@@ -16,14 +19,10 @@ class Deck {
     public:
         Deck(istream&, const CardFactory*);
         Card* draw();
+        
     protected:
-    
+        const CardFactory* deck;
+        istream* in;
 };
 
-Deck::Deck(istream& in, const CardFactory* set) {
-    // TODO: implementation
-}
-
-Card* Deck::draw() {
-    // TODO: implementation
-}
+#endif // DECK_H

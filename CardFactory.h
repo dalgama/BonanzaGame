@@ -1,5 +1,11 @@
 #include <iostream>
-//#include "Deck.h"
+#include <vector>
+#include <algorithm>
+#include <random>
+#include <fstream> 
+#include "Deck.h"
+#include "Card.h"
+#define SAVE_FILE "Beangame.txt"
 
 using namespace std;
 
@@ -12,20 +18,15 @@ using namespace std;
 
 class CardFactory {
 	public:
-		CardFactory();
-		/*static  CardFactory* getFactory();
-		Deck getDeck();*/
-	protected:
+		CardFactory(istream&);
+		static CardFactory* getFactory();
+		Deck getDeck();
+		Card* removeTopCard() const;
+	private:
+		/* Vector that will be populated with all the 105 cards. */
+		vector<Card*> cards;
+		/*The current variable is static because this causes this class to only have one CardFactory object.*/
+		static CardFactory *current;
+		istream *in;
+
 };
-
-CardFactory::CardFactory() {
-	// TODO: implementation
-}
-
-//static CardFactory* CardFactory::getFactory() {
-//	// TODO: implementation
-//}
-
-//Deck CardFactory::getDeck() {
-//	// TODO: implementation
-//}
