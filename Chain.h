@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -12,9 +15,23 @@ using namespace std;
 */
 
 class Chain {
-public:
-    Chain();
-
-private:
+    public:
+        Chain(istream&, const CardFactory*);
+        //Chain<T>& operator+=(Card*);
+        int sell();
+    protected:
 
 };
+//template<typename T>
+Chain::Chain(istream& in, const CardFactory* set) {
+    // TODO: implementation
+}
+//template<typename T>
+int Chain::sell() {
+    // TODO: implementation
+}
+
+//Chain<T>& Chain::operator+=(Card* type){
+
+    // TODO: insert return statement here
+//}

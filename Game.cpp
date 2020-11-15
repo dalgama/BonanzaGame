@@ -1,8 +1,13 @@
 #include <iostream>
+#include "Card.h"
 
-int main_one()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+int main() {
+	Blue *test = new Blue();
+	int x = test->getCardsPerCoin(7);
+	cout << x << endl;
+	return x;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

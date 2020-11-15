@@ -1,4 +1,8 @@
 #include <iostream>
+#include <list> 
+#include <iterator>
+#include "Card.h"
+#include "CardFactory.h"
 
 using namespace std;
 
@@ -9,9 +13,32 @@ using namespace std;
 */
 
 class Hand {
-public:
-    Hand();
-
-private:
+    public:
+        Hand(istream&, const CardFactory*);
+        Hand& operator+=(Card*);
+        Card* play();
+        Card* top();
+        Card* operator[](int);
+    protected:
 
 };
+
+Hand::Hand(istream& in, const CardFactory*) {
+    // TODO: implementation
+}
+
+Hand& Hand::operator+=(Card*) {
+    // TODO: implementation
+}
+
+Card* Hand::play() {
+    // TODO: implementation
+}
+
+Card* Hand::top() {
+    // TODO: implementation
+}
+
+Card* Hand::operator[](int) {
+    // TODO: implementation
+}
