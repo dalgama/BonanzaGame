@@ -24,7 +24,9 @@ class Hand {
         Card* top();
         /* Returns and removes the Card at a given index.*/
         Card* operator[](int);
+        /* To insert all the cards in the Hand to an ostream.*/
         void print(ostream&);
     protected:
+        /*Stores all the card in the players hand.*/
         list<Card*> players_hand;
 };

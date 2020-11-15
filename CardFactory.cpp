@@ -59,16 +59,3 @@ Deck CardFactory::getDeck() {
 	//Creates an Deck object with the CardFactory pointer than holds the shuffled deck(current).
 	return Deck(*in, current);
 }
-
-/*
-* -- Custom Function --
-* This function return the top card from the deck and removes the card from the deck.
-*/
-Card* CardFactory::removeTopCard() const{
-	// First card in the deck.
-	Card *top = current->cards.front();
-	// Removes the top most card from the deck.
-	current->cards.erase(current->cards.begin());
-	// Returns the card that was removed from the deck.
-	return top;
-}

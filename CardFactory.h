@@ -19,10 +19,11 @@ using namespace std;
 class CardFactory {
 	public:
 		CardFactory(istream&);
+		/* Returns a pointer to the only instance of CardFactory*/
 		static CardFactory* getFactory();
+		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
-		Card* removeTopCard() const;
-	private:
+	
 		/* Vector that will be populated with all the 105 cards. */
 		vector<Card*> cards;
 		/*The current variable is static because this causes this class to only have one CardFactory object.*/

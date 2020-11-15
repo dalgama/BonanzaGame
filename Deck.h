@@ -17,11 +17,13 @@ using namespace std;
 
 class Deck {
     public:
+        /* Constructor which accepts an istream and reconstruct the Deck from file.*/
         Deck(istream&, const CardFactory*);
+        /* Returns and removes the top card from the deck */
         Card* draw();
-        
     protected:
-        const CardFactory* deck;
+        /*Stores all the card in the main Deck.*/
+        vector<Card*> deck;
         istream* in;
 };
 

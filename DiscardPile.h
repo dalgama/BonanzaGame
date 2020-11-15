@@ -12,26 +12,17 @@ using namespace std;
 
 class DiscardPile {
     public:
+        /* Constructor which accepts an istream and reconstruct the Discard pile from file.*/
         DiscardPile(istream&, const CardFactory*);
+        /* Discards the card to the pile */
         DiscardPile& operator+=(Card*);
+        /* Returns and removes the top card from the discard pile. */
         Card* pickUp();
+        /* Returns but does not remove the top card from the discard pile.*/
         Card* top();
-    protected:
-
+        /* To insert all the cards in the DiscardPile to an ostream.*/
+        void print(ostream&);
+    private:
+        /*Stores all the card in the Discard pile.*/
+        vector<Card*> discard_pile;
 };
-
-DiscardPile::DiscardPile(istream& in, const CardFactory* set) {
-    // TODO: implementation
-}
-
-DiscardPile& DiscardPile::operator+=(Card*) {
-    // TODO: implementation
-}
-
-Card* DiscardPile::pickUp() {
-    // TODO: implementation
-}
-
-Card* DiscardPile::top() {
-    // TODO: implementation
-}
