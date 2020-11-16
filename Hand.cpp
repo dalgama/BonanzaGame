@@ -1,7 +1,7 @@
 #include "Hand.h"
 
 /* Constructor which accepts an istream and reconstruct the Hand from file.*/
-Hand::Hand(istream& in, const CardFactory* Cf) {
+Hand::Hand(istream& in, const CardFactory* set) {
     // TODO: implementation
 }
 
@@ -39,10 +39,11 @@ Card* Hand::operator[](int index) {
     return tmp;
 }
 
+/* To insert all the cards in the Hand to an ostream.*/
 void Hand::print(ostream& out) {
     out << "Hands [ ";
-    for (auto& cards : players_hand) {
-        cards->print(out);
+    for (auto& card : players_hand) {
+        card->print(out);
         cout << " ";
     }
     out << "]" << endl;
