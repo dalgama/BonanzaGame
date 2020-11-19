@@ -1,3 +1,5 @@
+#ifndef CHAIN_H
+#define CHAIN_H
 #include <iostream>
 #include <vector>
 #include "Card.h"
@@ -13,25 +15,24 @@ using namespace std;
 * A template class will have to created for Chain being parametric in the type of card. In this project, we will instantiate Chainfor the corresponding bean card.
 * Suggestion: we can use a std::vector.
 */
-
 class Chain {
     public:
         Chain(istream&, const CardFactory*);
-        //Chain<T>& operator+=(Card*);
+        //Chain<T>& operator+=(T*);
         int sell();
     protected:
-
 };
-//template<typename T>
-Chain::Chain(istream& in, const CardFactory* set) {
+
+//Chain::Chain(istream& in, const CardFactory* set) {
     // TODO: implementation
-}
+//}
 //template<typename T>
 int Chain::sell() {
     // TODO: implementation
 }
-
-//Chain<T>& Chain::operator+=(Card* type){
-
-    // TODO: insert return statement here
+//template<typename T>
+//Chain<T>& Chain<T>::operator+=(T* type){
+//
+//    // TODO: insert return statement here
 //}
+#endif

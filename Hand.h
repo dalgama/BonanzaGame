@@ -14,31 +14,19 @@ using namespace std;
 
 class Hand {
     public:
+        /* Constructor which accepts an istream and reconstruct the Hand from file.*/
         Hand(istream&, const CardFactory*);
+        /* Adds the card to the rear of the hand.*/
         Hand& operator+=(Card*);
+        /* Returns and removes the top card from the player's hand.*/
         Card* play();
+        /* Returns but does not remove the top card from the player's hand.*/
         Card* top();
+        /* Returns and removes the Card at a given index.*/
         Card* operator[](int);
+        /* To insert all the cards in the Hand to an ostream.*/
+        void print(ostream&);
     protected:
-
+        /*Stores all the card in the players hand.*/
+        list<Card*> players_hand;
 };
-
-Hand::Hand(istream& in, const CardFactory*) {
-    // TODO: implementation
-}
-
-Hand& Hand::operator+=(Card*) {
-    // TODO: implementation
-}
-
-Card* Hand::play() {
-    // TODO: implementation
-}
-
-Card* Hand::top() {
-    // TODO: implementation
-}
-
-Card* Hand::operator[](int) {
-    // TODO: implementation
-}

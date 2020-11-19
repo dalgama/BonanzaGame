@@ -9,8 +9,11 @@ using namespace std;
 
 class Card {
 	public:
-		virtual int getCardsPerCoin(int);
+		/* Returns how many cards are necessary to recieve the corresponding number of coins.*/
+		virtual int getCardsPerCoin(int) = 0;
+		/* Returns the full name of the card (e.g. Blue)*/
 		virtual string getName() = 0;
+		/* To inserts the first chacacter of the card to an ostream.*/
 		virtual void print(ostream& out) = 0;
 	protected:
 		string name;
