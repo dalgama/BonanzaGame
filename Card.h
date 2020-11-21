@@ -11,6 +11,7 @@ class Card {
 	public:
 		/* Returns how many cards are necessary to recieve the corresponding number of coins.*/
 		virtual int getCardsPerCoin(int) = 0;
+		virtual int getCoinsPerCard(int) = 0;
 		/* Returns the full name of the card (e.g. Blue)*/
 		virtual string getName() = 0;
 		/* To inserts the first chacacter of the card to an ostream.*/
@@ -22,6 +23,7 @@ class Card {
 class Blue : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -32,6 +34,7 @@ class Blue : public Card {
 class Chili : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -42,6 +45,7 @@ class Chili : public Card {
 class Stink : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -52,6 +56,7 @@ class Stink : public Card {
 class Green : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -62,6 +67,7 @@ class Green : public Card {
 class soy : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -72,6 +78,7 @@ class soy : public Card {
 class black : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -82,6 +89,7 @@ class black : public Card {
 class Red : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
@@ -92,6 +100,7 @@ class Red : public Card {
 class garden : public Card {
 	public:
 		int getCardsPerCoin(int);
+		int getCoinsPerCard(int);
 		string getName() { return name; };
 		void print(ostream& out);
 	protected:
