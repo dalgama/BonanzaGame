@@ -37,6 +37,39 @@ int Blue::getCardsPerCoin(int coins) {
 	return numofCard;
 }
 
+int Blue::getCoinsPerCard(int cards){
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
+}
+
 void Blue::print(ostream& out) {
 	out.put('B');
 }
@@ -76,6 +109,39 @@ int Chili::getCardsPerCoin(int coins) {
 		}
 	}
 	return numofCard;
+}
+
+int Chili::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
 }
 
 void Chili::print(ostream& out) {
@@ -119,6 +185,39 @@ int Stink::getCardsPerCoin(int coins) {
 	return numofCard;
 }
 
+int Stink::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
+}
+
 void Stink::print(ostream& out) {
 	out.put('S');
 }
@@ -158,6 +257,39 @@ int Green::getCardsPerCoin(int coins) {
 		}
 	}
 	return numofCard;
+}
+
+int Green::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
 }
 
 void Green::print(ostream& out) {
@@ -201,6 +333,39 @@ int soy::getCardsPerCoin(int coins) {
 	return numofCard;
 }
 
+int soy::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
+}
+
 void soy::print(ostream& out) {
 	out.put('s');
 }
@@ -240,6 +405,39 @@ int black::getCardsPerCoin(int coins) {
 		}
 	}
 	return numofCard;
+}
+
+int black::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
 }
 
 void black::print(ostream& out) {
@@ -283,6 +481,39 @@ int Red::getCardsPerCoin(int coins) {
 	return numofCard;
 }
 
+int Red::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
+}
+
 void Red::print(ostream& out) {
 	out.put('R');
 }
@@ -322,6 +553,39 @@ int garden::getCardsPerCoin(int coins) {
 		}
 	}
 	return numofCard;
+}
+
+int garden::getCoinsPerCard(int cards) {
+	int numofCoins = 0;
+
+	if (cards == 0 || cards < score[1]) {
+		return numofCoins;
+	}
+
+	else {
+		while (cards >= 0) {
+			if (cards == 0 || cards < score[1]) {
+				return numofCoins;
+			}
+			else if (cards >= score[4]) {
+				cards = cards - score[4];
+				numofCoins += 4;
+			}
+			else if (cards >= score[3]) {
+				cards = cards - score[3];
+				numofCoins += 3;
+			}
+			else if (cards >= score[2]) {
+				cards = cards - score[2];
+				numofCoins += 2;
+			}
+			else if (cards >= score[1]) {
+				cards = cards - score[1];
+				numofCoins += 1;
+			}
+		}
+	}
+	return numofCoins;
 }
 
 void garden::print(ostream& out) {
