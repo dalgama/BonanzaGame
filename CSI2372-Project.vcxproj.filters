@@ -65,5 +65,8 @@
     <ClCompile Include="Players.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
