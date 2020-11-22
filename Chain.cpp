@@ -10,19 +10,11 @@ int Chain<T>::sell() {
 }
 template<typename T>
 Chain<T>& Chain<T>::operator+=(Card* card) {
-    try
-    {
-        if (typeid(c) != typeid(chain_cards.front());)
-        {
-
-        }
-        else
-        {
-            chain_cards.push_back(card);
-        }
+    if (typeid(c) != typeid(chain_cards.front())) {
+        throw new IllegalType("Not the same type.");
+        cout << "Authentic exception." << endl;
     }
-    catch (IllegalType ill)
-    {
-        cout << " " << endl;
+    else {
+        chain_cards.push_back(card);
     }
 }

@@ -28,9 +28,12 @@ private:
 
 /* Exception class*/
 class IllegalType {
-private:
-    string state_error;
-public:
-    IllegalType(string error) :state_error(error)​​ {}
+    private:
+        string state_error;
+    public:
+        IllegalType(string error);
 }​​;
+IllegalType::IllegalType(string error) {
+    state_error = error;
+}
 #endif
