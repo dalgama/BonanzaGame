@@ -18,7 +18,7 @@ using namespace std;
 class Chain {
     public:
         Chain(istream&, const CardFactory*);
-        //Chain<T>& operator+=(T*);
+        Chain<T>& operator+=(Card*);
         int sell();
     protected:
 };
