@@ -1,16 +1,28 @@
 #include "Chain.h"
 
-//Chain::Chain(istream& in, const CardFactory* set) {
-    // TODO: implementation
-//}
-//template<typename T>
-int Chain::sell() {
+template<typename T>
+Chain<T>::Chain(istream& in, const CardFactory* set) {
     // TODO: implementation
 }
-//template<typename T>
-//Chain<T>& Chain<T>::operator+=(T* type){
-//
-//    // TODO: insert return statement here
-//}
+template<typename T>
+int Chain<T>::sell() {
+    // TODO: implementation
+}
+template<typename T>
+Chain<T>& Chain<T>::operator+=(Card* card) {
+    try
+    {
+        if (typeid(c) != typeid(chain_cards.front());)
+        {
 
-// Change
+        }
+        else
+        {
+            chain_cards.push_back(card);
+        }
+    }
+    catch (IllegalType ill)
+    {
+        cout << " " << endl;
+    }
+}
