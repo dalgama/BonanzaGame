@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardFactory.cpp" />
+    <ClCompile Include="Chain.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="DiscardPile.cpp" />
     <ClCompile Include="Game.cpp" />
