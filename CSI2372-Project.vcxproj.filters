@@ -36,10 +36,10 @@
     <ClInclude Include="Hand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Players.h">
+    <ClInclude Include="CardFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CardFactory.h">
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,10 +62,10 @@
     <ClCompile Include="DiscardPile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Players.cpp">
+    <ClCompile Include="Chain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chain.cpp">
+    <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
