@@ -12,7 +12,7 @@ int Chain<T>::sell() {
 
 template<typename T>
 Chain<T>& Chain<T>::operator+=(Card* card) {
-    if (typeid(c) != typeid(chain_cards.front())) {
+    if (typeid(card) != typeid(chain_cards.front())) {
         throw new IllegalType("Not the same type.");
     }
     else {
