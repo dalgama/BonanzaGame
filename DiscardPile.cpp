@@ -8,7 +8,7 @@ DiscardPile::DiscardPile(istream& in, const CardFactory* set) {
 /* Discards the card to the pile */
 DiscardPile& DiscardPile::operator+=(Card* c) {
     discard_pile.push_back(c);
-    return *this;
+   return *this;
 }
 
 /* Returns and removes the top card from the discard pile. */

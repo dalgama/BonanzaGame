@@ -36,14 +36,14 @@ class Player {
 		/* Returns the number of non-zero chains. */
 		int getNumChains();
 		/* Returns the number of non-zero chains.*/
-		Chain& operator[](int i);
+		Chain<Card*>& operator[](int i);
 		/* Adds a empty third chain to the player for three coins. The function reduces the coin count for the player by two.
            If the player does not have enough coins then an exception NotEnoughCoins is thrown.*/
 		void buyThirdChain();
 		/* Prints the top card of the player's hand (with arguement false) or all player's hand (with argument true) to the supplied ostream.*/
 		void printHand(ostream& out, bool b);
 		/* Called when you can to sell a chain.*/
-		void sellChain(Chain*);
+		void sellChain(Chain<Card*>*);
 	private:
 		string players_name;
 		Hand* players_hand;

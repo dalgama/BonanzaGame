@@ -11,6 +11,7 @@ class Card {
 	public:
 		/* Returns how many cards are necessary to recieve the corresponding number of coins.*/
 		virtual int getCardsPerCoin(int) = 0;
+		/* Returns the number of coins earned based on the number of cards.*/
 		virtual int getCoinsPerCard(int) = 0;
 		/* Returns the full name of the card (e.g. Blue)*/
 		virtual string getName() = 0;
