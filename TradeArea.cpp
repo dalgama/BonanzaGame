@@ -19,9 +19,9 @@ bool TradeArea::legal(Card* card) {
 }
 
 Card* TradeArea::trade(string name) {
-	for (Card* card : trade_area) {
-		if (card->getName() == name) {
-			trade_area.remove(card);
+	for (CardList::iterator iter = trade_area.begin(); iter != trade_area.end(); iter++) {
+		if ((*iter)->getName() == name) {
+			return *trade_area.erase(iter);
 		}
 	}
 }
