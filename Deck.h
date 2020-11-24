@@ -21,6 +21,8 @@ class Deck {
         Deck(istream&, const CardFactory*);
         /* Returns and removes the top card from the deck */
         Card* draw();
+        /* Returns the deck */
+        vector<Card*> getDeck();
     protected:
         /*Stores all the card in the main Deck.*/
         vector<Card*> deck;

@@ -1,4 +1,4 @@
-#include "Players.h"
+#include "Player.h"
 
 /* Constructor that creates a Player with a given name. */
 Player::Player(string& n) {

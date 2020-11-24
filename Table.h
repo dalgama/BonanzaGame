@@ -1,5 +1,9 @@
 #include <iostream>
 #include "CardFactory.h"
+#include "Player.h"
+#include "Deck.h"
+#include "DiscardPile.h"
+#include "TradeArea.h"
 
 using namespace std;
 
@@ -13,18 +17,11 @@ class Table {
 		Table(istream&, const CardFactory*);
 		bool win(string&);
 		void printHand(bool);
-	protected:
-
+	private:
+		Player A;
+		Player B;
+		Deck deck;
+		DiscardPile dPile;
+		TradeArea tArea;
+		ostream& out;
 };
-
-Table::Table(istream& in, const CardFactory* set) {
-	// TODO: implementation
-}
-
-bool Table::win(string& w) {
-	// TODO: implementation
-}
-
-void Table::printHand(bool h) {
-	// TODO: implementation
-}
