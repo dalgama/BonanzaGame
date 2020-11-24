@@ -42,7 +42,7 @@ int Player::getNumChains() {
 }
 
 /* Returns the number of non-zero chains.*/
-Chain& Player::operator[](int i) {
+Chain<Card*>& Player::operator[](int i) {
 	return currChains.at(i);
 }
 
@@ -75,7 +75,7 @@ void Player::printHand(ostream& out, bool ntop) {
 }
 
 /* Called when you can to sell a chain.*/
-void Player::sellChain(Chain* c) {
-	this->operator+=(c->sell());
-	currChains.erase(remove(currChains.begin(), currChains.end(), c), currChains.end());
+void Player::sellChain(Chain<Card*> *chain) {
+	this->operator+=(chain->sell());
+	currChains.erase(remove(currChains.begin(), currChains.end(), chain), currChains.end());
 }

@@ -24,7 +24,7 @@ class CardFactory {
 		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
 	
-		/* Vector that will be populated with all the 105 cards. */
+		/* Vector that will be populated with all the 104 cards. */
 		vector<Card*> cards;
 		/*The current variable is static because this causes this class to only have one CardFactory object.*/
 		static CardFactory *current;

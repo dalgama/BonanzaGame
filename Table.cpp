@@ -1,6 +1,7 @@
 #include "Table.h"
 
 Table::Table(istream& in, const CardFactory* set) {
+
 }
 
 bool Table::win(string& w) {
