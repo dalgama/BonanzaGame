@@ -24,6 +24,7 @@ Card* TradeArea::trade(string name) {
 			trade_area.remove(card);
 		}
 	}
+	return trade_area;
 }
 
 int TradeArea::numCards() {

@@ -22,6 +22,7 @@ public:
     Chain(istream&, const CardFactory*);
     Chain<T>& operator+=(Card*);
     int sell();
+    friend ostream& operator << (ostream & out, const T& card);
 private:
     vector<T*> chain_cards;
 };
