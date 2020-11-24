@@ -155,6 +155,8 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="TradeArea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />

@@ -2,12 +2,14 @@
 
 template<typename T>
 Chain<T>::Chain(istream& in, const CardFactory* set) {
-    // TODO: implementation
+
 }
+
 template<typename T>
 int Chain<T>::sell() {
-    // TODO: implementation
+    return getCoinsPerCard(chain_cards.size());
 }
+
 template<typename T>
 Chain<T>& Chain<T>::operator+=(Card* card) {
     if (typeid(c) != typeid(chain_cards.front())) {

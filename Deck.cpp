@@ -15,3 +15,8 @@ Card* Deck::draw() {
    }
     return tmp;
 }
+
+/* Returns the deck */
+vector<Card*> Deck::getDeck() {
+    return deck;
+}
