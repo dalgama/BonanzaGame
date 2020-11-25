@@ -23,10 +23,14 @@ Chain<T>& Chain<T>::operator+=(Card* card) {
 }
 
 template<typename T>
+int Chain<T>::size() {
+    return sizeof(chain_cards)/sizeof(T);
+}
+
+template<typename T>
 ostream& operator <<(ostream& out, const T& card) {
     if (typeid(card) == typeid(Card)) {
-        out.put(card.getName());
-        out.put("    ");
-        ((Card)card).print(out);
+        card.print(out);
     }
+    return out;
 }
