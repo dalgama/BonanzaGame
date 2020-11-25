@@ -3,8 +3,8 @@
 #define DECK_H
 #include <iostream>
 #include <vector>
+
 #include "Card.h"
-#include "CardFactory.h"
 
 using namespace std;
 
@@ -14,19 +14,19 @@ using namespace std;
 * Cards can not be inserted to the deck.
 * Sugestion: Deck can usefully extent a std::vector.
 */
-
-class Deck {
+class CardFactory;
+class Deck : public vector<Card*> {
     public:
         /* Constructor which accepts an istream and reconstruct the Deck from file.*/
         Deck(istream&, const CardFactory*);
         /* Returns and removes the top card from the deck */
         Card* draw();
         /* Returns the deck */
-        vector<Card*> getDeck();
+        Deck getDeck();
     protected:
         /*Stores all the card in the main Deck.*/
-        vector<Card*> deck;
-        istream* in;
+        //vector<Card*> deck;
+        //istream* in;
 };
 
 #endif // DECK_H

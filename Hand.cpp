@@ -30,7 +30,7 @@ Card* Hand::top() {
 Card* Hand::operator[](int index) {
     // Creates a record of the Card at the given index.
     Card* tmp = players_hand.front() + index;
-    if (!players_hand.empty() && players_hand.size() >= index) {
+    if (!players_hand.empty() && players_hand.size() >= unsigned(index)) {
         list<Card*>::iterator it = players_hand.begin();
         advance(it, index);
         // Erases the Card at the given index.
