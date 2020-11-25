@@ -1,7 +1,11 @@
 ﻿#ifndef CHAIN_H
 #define CHAIN_H
+
+
+
 #include <iostream>
 #include <vector>
+
 #include "Card.h"
 #include "CardFactory.h"
 
@@ -18,23 +22,21 @@ using namespace std;
 
 template<class T>
 class Chain {
-public:
-    Chain(istream&, const CardFactory*);
-    Chain<T>& operator+=(Card*);
-    int sell();
-    friend ostream& operator << (ostream & out, const T& card);
-private:
-    vector<T*> chain_cards;
+    public:
+        Chain(istream&, const CardFactory*);
+        Chain<T>& operator+=(Card*);
+        int sell();
+        friend ostream& operator << (ostream & out, const T& card);
+        int size();
+    private:
+        vector<T*> chain_cards;
 };
 
 /* Exception class*/
-class IllegalType {
-    private:
-        string state_error;
-    public:
-        IllegalType(string error);
+class IllegalType : public exception {
+private:
+    string state_error;
+public:
+    IllegalType(string error) : state_error(error) {};
 }​​;
-IllegalType::IllegalType(string error) {
-    state_error = error;
-}
 #endif

@@ -1,3 +1,5 @@
+#ifndef CARD_H
+#define CARD_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -19,6 +21,7 @@ class Card {
 		virtual void print(ostream& out) = 0;
 	protected:
 		string name;
+		int score[5] = {};
 };
 
 class Blue : public Card {
@@ -109,3 +112,4 @@ class garden : public Card {
 		int score[5] = { 6,0,2,3,0 };
 };
 
+#endif
