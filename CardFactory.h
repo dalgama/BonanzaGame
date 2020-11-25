@@ -1,11 +1,13 @@
+#ifndef CARDFACTORY_H
+#define CARDFACTORY_H
+
 #include <iostream>
-#include <vector>
+#include <list>
 #include <algorithm>
 #include <random>
-#include <fstream> 
+#include <fstream>
+
 #include "Deck.h"
-#include "Card.h"
-#define SAVE_FILE "Beangame.txt"
 
 using namespace std;
 
@@ -18,16 +20,14 @@ using namespace std;
 
 class CardFactory {
 	public:
-		CardFactory(istream&);
 		/* Returns a pointer to the only instance of CardFactory*/
-		static CardFactory* getFactory();
+		static CardFactory* getFactory(istream&);
 		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
-	
-		/* Vector that will be populated with all the 104 cards. */
-		vector<Card*> cards;
-		/*The current variable is static because this causes this class to only have one CardFactory object.*/
-		static CardFactory *current;
-		istream *in;
-
+		/* Destory the card factory*/
+		~CardFactory();
+	private:
+		CardFactory(istream&);
+		Deck* currentDeck;
 };
+#endif

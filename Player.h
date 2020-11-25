@@ -25,6 +25,8 @@ class Player {
 		Player(string&);
 		/* Constructor which accepts an istream and reconstruct the Player from file. */
 		Player(istream&, const  CardFactory*);
+		/*Destroy Player*/
+		~Player();
 		/* Get the name of the player.*/
 		string getName();
 		/* Get the number of coins currently held by the player. */
