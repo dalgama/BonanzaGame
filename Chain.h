@@ -1,18 +1,15 @@
-﻿#include <iostream>
+﻿#ifndef CHAIN_H
+#define CHAIN_H
+
+
+
+#include <iostream>
 #include <vector>
 
 #include "Card.h"
 #include "CardFactory.h"
 
 using namespace std;
-
-/* Exception class*/
-class IllegalType : public exception {
-    private:
-        string state_error;
-    public:
-        IllegalType(string error): state_error(error) {};
-}​​;
 
 /*
 * Chain is also a container.
@@ -34,3 +31,12 @@ class Chain {
     private:
         vector<T*> chain_cards;
 };
+
+/* Exception class*/
+class IllegalType : public exception {
+private:
+    string state_error;
+public:
+    IllegalType(string error) : state_error(error) {};
+}​​;
+#endif
