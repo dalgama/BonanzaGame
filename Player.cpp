@@ -9,6 +9,9 @@ Player::Player(string& n) {
 Player::Player(istream& in, const  CardFactory* set) {
 	players_hand = new Hand(in, set);
 }
+Player::~Player() {
+	delete(players_hand);
+}
 
 /* Get the name of the player.*/
 string Player::getName() {

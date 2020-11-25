@@ -61,3 +61,10 @@ Deck CardFactory::getDeck() {
 	//Creates an Deck object with the CardFactory pointer than holds the shuffled deck(current).
 	return *currentDeck;
 }
+
+/*
+* Destory the card factory
+*/
+CardFactory::~CardFactory() {
+	delete currentDeck;
+}
