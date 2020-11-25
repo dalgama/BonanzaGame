@@ -23,10 +23,6 @@ class Deck : public vector<Card*> {
         Card* draw();
         /* Returns the deck */
         Deck getDeck();
-    protected:
-        /*Stores all the card in the main Deck.*/
-        //vector<Card*> deck;
-        //istream* in;
 };
 
 #endif // DECK_H

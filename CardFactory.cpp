@@ -7,7 +7,6 @@ CardFactory::CardFactory(istream& inS) {
 	if (currentDeck == nullptr) {
 		currentDeck = new Deck(inS, this);
 	}
-	input = &inS;
 
 	for (int i = 0; i < 104; i++) {
 		//Inserting Blue cards to the deck.

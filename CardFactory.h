@@ -24,11 +24,8 @@ class CardFactory {
 		static CardFactory* getFactory(istream&);
 		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
-	
 	private:
 		CardFactory(istream&);
 		Deck* currentDeck;
-		istream *input;
-
 };
 #endif
