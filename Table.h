@@ -14,14 +14,14 @@ using namespace std;
 
 class Table {
 	public:
-		Table(istream&, const CardFactory*);
-		bool win(string&);
-		void printHand(bool);
+		Table(istream& in, const CardFactory* set);
+		bool win(string& w);
+		void printHand(ostream& out, bool);
 	private:
-		Player A;
-		Player B;
-		Deck deck;
-		DiscardPile dPile;
-		TradeArea tArea;
-		ostream& out;
+		Player *A;
+		Player *B;
+		Deck *deck;
+		DiscardPile *dPile;
+		TradeArea *tArea;
+		// ostream& out;
 };

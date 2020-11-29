@@ -34,9 +34,10 @@ class Chain {
 
 /* Exception class*/
 class IllegalType : public exception {
+public:
+    IllegalType();
+    IllegalType(string error) : state_error(error) {};
 private:
     string state_error;
-public:
-    IllegalType(string error) : state_error(error) {};
 }​​;
 #endif
