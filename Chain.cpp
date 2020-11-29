@@ -17,7 +17,6 @@ Chain<T>& Chain<T>::operator+=(Card* card) {
     }
     else {
         chain_cards.push_back(card);
-        
     }
     return *this;
 }
@@ -33,4 +32,7 @@ ostream& operator <<(ostream& out, const T& card) {
         card.print(out);
     }
     return out;
+}
+
+IllegalType::IllegalType() {
 }
