@@ -19,11 +19,14 @@ bool TradeArea::legal(Card* card) {
 }
 
 Card* TradeArea::trade(string name) {
-	for (CardList::iterator iter = trade_area.begin(); iter != trade_area.end(); iter++) {
+	Card* tmp = nullptr;
+	for (CardList::iterator iter = trade_area.begin(); iter != trade_area.end(); ++iter) {
 		if ((*iter)->getName() == name) {
-			return *trade_area.erase(iter);
+			tmp = (*iter);
+			trade_area.erase(iter);
 		}
 	}
+	return tmp;
 }
 
 int TradeArea::numCards() {

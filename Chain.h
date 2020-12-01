@@ -27,17 +27,9 @@ class Chain {
         Chain<T>& operator+=(Card*);
         int sell();
         friend ostream& operator << (ostream & out, const T& card);
-        int size();
+        //int size();
     private:
         vector<T*> chain_cards;
 };
 
-/* Exception class*/
-class IllegalType : public exception {
-public:
-    IllegalType();
-    IllegalType(string error) : state_error(error) {};
-private:
-    string state_error;
-}​​;
 #endif

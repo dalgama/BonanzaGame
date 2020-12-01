@@ -1,5 +1,9 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <iostream>
 #include <string>
+
 #include "CardFactory.h"
 #include "Chain.h"
 #include "Hand.h"
@@ -14,9 +18,9 @@ using namespace std;
 /* Exception class*/
 class NotEnoughCoins {
 	private:
-		string state_error;
+		string state_error_NEC;
 	public:
-		NotEnoughCoins(string error) : state_error(error) {};
+		NotEnoughCoins(string error_NEC) : state_error_NEC(error_NEC) {};
 };
 
 class Player {
@@ -28,7 +32,7 @@ class Player {
 		/*Destroy Player*/
 		~Player();
 		/* Get the name of the player.*/
-		string getName();
+		std::string getName();
 		/* Get the number of coins currently held by the player. */
 		int getNumCoins();
 		/* Add a number of coins */
@@ -45,12 +49,14 @@ class Player {
 		/* Prints the top card of the player's hand (with arguement false) or all player's hand (with argument true) to the supplied ostream.*/
 		void printHand(ostream& out, bool b);
 		/* Called when you can to sell a chain.*/
-		void sellChain(Chain<Card*>*);
+		//void sellChain(Chain<Card*>);
 	private:
-		string players_name;
-		Hand* players_hand;
+		std::string players_name;
+		Hand *players_hand;
 		int numCoins = 0;
 		int numChains = 0;
 		vector<Chain<Card*>> currChains;
 
 };
+
+#endif

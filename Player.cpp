@@ -78,7 +78,7 @@ void Player::printHand(ostream& out, bool ntop) {
 }
 
 /* Called when you can to sell a chain.*/
-void Player::sellChain(Chain<Card*> *chain) {
-	this->operator+=(chain->sell());
-	currChains.erase(remove(currChains.begin(), currChains.end(), chain), currChains.end());
-}
+//void Player::sellChain(Chain<Card*> chain) {
+//	this->operator+=(chain.sell());
+//	vector<Chain<Card*>>::iterator rem = remove(currChains.begin(), currChains.end(), chain);
+//}
