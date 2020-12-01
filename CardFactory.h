@@ -21,13 +21,14 @@ using namespace std;
 class CardFactory {
 	public:
 		/* Returns a pointer to the only instance of CardFactory*/
-		static CardFactory* getFactory(istream&);
+		static CardFactory* getFactory();
 		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
 		/* Destory the card factory*/
 		~CardFactory();
 	private:
-		CardFactory(istream&);
-		Deck* currentDeck;
+		CardFactory();
+		// Deck* currentDeck;
+		vector<Card*>* currentDeck;
 };
 #endif

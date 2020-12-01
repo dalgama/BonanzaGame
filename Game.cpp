@@ -1,13 +1,46 @@
 #include <iostream>
-#include "Card.h"
+#include <string>
+#include "Table.h"
+
+
 
 using namespace std;
 
 int main() {
+	cout << "Would you like to type the file name to load the game? Or, type 'new' to start a new game." << endl;
+	string filename;
+	cin >> filename;
+	ifstream in;
+	if (filename != "new") {
+		in.open(filename);
+	}
+
+	string n1;
+	string n2;
+	cout << "What is player one's name?" << std::endl;
+	cin >> n1;
+	cout << "What is player two's name?" << std::endl;
+	cin >> n2;
+
+	Player* p1 = new Player(n1);
+	Player* p2 = new Player(n2);
+
+	CardFactory* cardFactory = new CardFactory(in);
+	
+	p1->
+
+	p2.
+
+
+
+
+
+	/* 
 	Blue *test = new Blue();
 	int x = test->getCardsPerCoin(7);
 	cout << x << endl;
 	return x;
+	*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

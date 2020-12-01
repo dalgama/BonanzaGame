@@ -3,10 +3,7 @@
 /*
 * This constructor creates all the 104 bean cards in the game and stories it in a vector and shuffles the cards in the vector.
 */
-CardFactory::CardFactory(istream& inS) {
-	if (currentDeck == nullptr) {
-		currentDeck = new Deck(inS, this);
-	}
+CardFactory::CardFactory() {
 
 	for (int i = 0; i < 104; i++) {
 		//Inserting Blue cards to the deck.
@@ -49,9 +46,9 @@ CardFactory::CardFactory(istream& inS) {
 /*
 * This function returns the only CardFactory pointer the is created.
 */
-CardFactory* CardFactory::getFactory(istream &input) {
-	static CardFactory* current = new CardFactory(input);
-	return current;
+CardFactory* CardFactory::getFactory() {
+	static CardFactory current;
+	return &current;
 }
 
 /*
