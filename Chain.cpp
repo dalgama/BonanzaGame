@@ -1,4 +1,13 @@
-#include "Chain.h"
+﻿#include "Chain.h"
+
+/* Exception class*/
+class IllegalType : public exception {
+public:
+    IllegalType() {};
+    IllegalType(string illegal_error) : state_error(illegal_error) {};
+private:
+    string state_error;
+}​​;
 
 template<typename T>
 Chain<T>::Chain(istream& in, const CardFactory* set) {
@@ -7,13 +16,14 @@ Chain<T>::Chain(istream& in, const CardFactory* set) {
 
 template<typename T>
 int Chain<T>::sell() {
-    return getCoinsPerCard(chain_cards.size());
+    int coinsEarned = getCoinsPerCard(chain_cards.size());
+    return coinsEarned;
 }
 
 template<typename T>
 Chain<T>& Chain<T>::operator+=(Card* card) {
     if (typeid(card) != typeid(chain_cards.front())) {
-        throw new IllegalType("Not the same type.");
+        throw new IllegalType();
     }
     else {
         chain_cards.push_back(card);
@@ -21,10 +31,10 @@ Chain<T>& Chain<T>::operator+=(Card* card) {
     return *this;
 }
 
-template<typename T>
-int Chain<T>::size() {
-    return sizeof(chain_cards)/sizeof(T);
-}
+//template<typename T>
+//int Chain<T>::size() {
+//    return sizeof(chain_cards)/sizeof(T);
+//}
 
 template<typename T>
 ostream& operator <<(ostream& out, const T& card) {
@@ -32,7 +42,4 @@ ostream& operator <<(ostream& out, const T& card) {
         card.print(out);
     }
     return out;
-}
-
-IllegalType::IllegalType() {
 }
