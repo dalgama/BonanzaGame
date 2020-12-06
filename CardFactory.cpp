@@ -49,8 +49,8 @@ CardFactory::CardFactory(istream& inS) {
 /*
 * This function returns the only CardFactory pointer the is created.
 */
-CardFactory* CardFactory::getFactory(istream &input) {
-	static CardFactory* current = new CardFactory(input);
+CardFactory* CardFactory::getFactory() {
+	static CardFactory* current;
 	return current;
 }
 
