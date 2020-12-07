@@ -1,11 +1,11 @@
-#include "CardFactory.h"
+﻿#include "CardFactory.h"
 
 /*
 * This constructor creates all the 104 bean cards in the game and stories it in a vector and shuffles the cards in the vector.
 */
-CardFactory::CardFactory(istream& inS) {
+CardFactory::CardFactory() {
 	if (currentDeck == nullptr) {
-		currentDeck = new Deck(inS, this);
+		currentDeck = new Deck(this);
 	}
 
 	for (int i = 0; i < 104; i++) {
@@ -42,15 +42,20 @@ CardFactory::CardFactory(istream& inS) {
 			currentDeck->push_back(new garden());
 		}
 	}
-	//Shuffles the card variable current.card.
-	random_shuffle(currentDeck->begin(), currentDeck->end());
+	srand(time(NULL));
+	for (int i = 0; i < 104; i++) {
+		int x = rand() % 104;
+		Card* temp = currentDeck->at(i);
+		currentDeck->at(i) = currentDeck->at(x);
+		currentDeck->at(x) = temp;
+	}
 }
 
 /*
 * This function returns the only CardFactory pointer the is created.
 */
 CardFactory* CardFactory::getFactory() {
-	static CardFactory* current;
+	static CardFactory* current = new CardFactory();
 	return current;
 }
 

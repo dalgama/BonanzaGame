@@ -27,7 +27,8 @@ class CardFactory {
 		/* Destory the card factory*/
 		~CardFactory();
 	private:
-		CardFactory(istream&);
-		Deck* currentDeck;
+		CardFactory();
+		Deck* currentDeck = nullptr;
+		const CardFactory* current;
 };
 #endif

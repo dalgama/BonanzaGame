@@ -41,7 +41,7 @@ class Player {
 		int getMaxNumChains();
 		/* Returns the number of non-zero chains. */
 		int getNumChains();
-		/* Returns the number of non-zero chains.*/
+		/* Returns the chain at position i.*/
 		Chain<Card*>& operator[](int i);
 		/* Adds a empty third chain to the player for three coins. The function reduces the coin count for the player by two.
            If the player does not have enough coins then an exception NotEnoughCoins is thrown.*/
@@ -50,13 +50,12 @@ class Player {
 		void printHand(ostream& out, bool b);
 		/* Called when you can to sell a chain.*/
 		//void sellChain(Chain<Card*>);
+		Hand* players_hand;
+		vector<Chain<Card*>> currChains;
 	private:
 		std::string players_name;
-		Hand *players_hand;
 		int numCoins = 0;
-		int numChains = 0;
-		vector<Chain<Card*>> currChains;
-
+		int numChains = 2;
 };
 
 #endif

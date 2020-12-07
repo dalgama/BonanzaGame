@@ -5,6 +5,14 @@ Deck::Deck(istream& inS, const CardFactory* shuffled_deck) {
 
 }
 
+Deck::Deck(const CardFactory*) {
+
+}
+
+Deck::Deck() {
+
+}
+
 /* Returns and removes the top card from the deck */
 Card* Deck::draw() {
     Card* tmp = nullptr;

@@ -2,7 +2,7 @@
 
 /* Constructor which accepts an istream and reconstruct the Discarpile from file.*/
 DiscardPile::DiscardPile(istream& in, const CardFactory* set) {
-    // TODO: implementation
+
 }
 
 /* Discards the card to the pile */

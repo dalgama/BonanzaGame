@@ -23,6 +23,8 @@ class Deck : public vector<Card*> {
         Card* draw();
         /* Returns the deck */
         Deck getDeck();
+        Deck(const CardFactory*);
+        Deck();
 };
 
 #endif // DECK_H

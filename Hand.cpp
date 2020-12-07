@@ -2,7 +2,11 @@
 
 /* Constructor which accepts an istream and reconstruct the Hand from file.*/
 Hand::Hand(istream& in, const CardFactory* set) {
-    // TODO: implementation
+
+}
+
+Hand::Hand() {
+
 }
 
 /* Adds the card to the rear of the hand.*/

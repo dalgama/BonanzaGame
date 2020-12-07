@@ -16,12 +16,10 @@ class Table {
 	public:
 		Table(istream& in, const CardFactory* set);
 		bool win(string& w);
-		void printHand(ostream& out, bool);
-	private:
+		void printHand(bool);
 		Player *A;
 		Player *B;
-		Deck *deck;
+		Deck deck;
 		DiscardPile *dPile;
-		TradeArea *tArea;
-		// ostream& out;
+		TradeArea* tArea;
 };

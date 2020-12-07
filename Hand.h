@@ -16,6 +16,7 @@ class Hand {
     public:
         /* Constructor which accepts an istream and reconstruct the Hand from file.*/
         Hand(istream&, const CardFactory*);
+        Hand();
         /* Adds the card to the rear of the hand.*/
         Hand& operator+=(Card*);
         /* Returns and removes the top card from the player's hand.*/
@@ -26,7 +27,6 @@ class Hand {
         Card* operator[](int);
         /* To insert all the cards in the Hand to an ostream.*/
         void print(ostream&);
-    protected:
         /*Stores all the card in the players hand.*/
         list<Card*> players_hand;
 };

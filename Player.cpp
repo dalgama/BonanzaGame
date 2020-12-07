@@ -3,6 +3,7 @@
 /* Constructor that creates a Player with a given name. */
 Player::Player(string& n) {
 	players_name = n;
+	players_hand = new Hand();
 }
 
 /* Constructor which accepts an istream and reconstruct the Player from file. */
@@ -44,7 +45,7 @@ int Player::getNumChains() {
 	}
 }
 
-/* Returns the number of non-zero chains.*/
+/* Returns the chain at position i.*/
 Chain<Card*>& Player::operator[](int i) {
 	return currChains.at(i);
 }
@@ -76,9 +77,3 @@ void Player::printHand(ostream& out, bool ntop) {
 		tmp->print(out);
 	}
 }
-
-/* Called when you can to sell a chain.*/
-//void Player::sellChain(Chain<Card*> chain) {
-//	this->operator+=(chain.sell());
-//	vector<Chain<Card*>>::iterator rem = remove(currChains.begin(), currChains.end(), chain);
-//}

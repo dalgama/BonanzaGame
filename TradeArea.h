@@ -17,7 +17,6 @@ class TradeArea {
 		bool legal(Card*);
 		Card* trade(string);
 		int numCards();
-	private:
 		/*Stores all the card in the TradeArea.*/
 		CardList trade_area;
 };

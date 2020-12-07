@@ -15,6 +15,14 @@ Chain<T>::Chain(istream& in, const CardFactory* set) {
 }
 
 template<typename T>
+Chain<T>::Chain() {
+    Card* tmp1 = new Blue();
+    chain_cards.push_back(tmp1);
+    string tmp = chain_cards[0]->getName();
+    cout << tmp << endl;
+}
+
+template<typename T>
 int Chain<T>::sell() {
     int coinsEarned = getCoinsPerCard(chain_cards.size());
     return coinsEarned;
@@ -30,11 +38,6 @@ Chain<T>& Chain<T>::operator+=(Card* card) {
     }
     return *this;
 }
-
-//template<typename T>
-//int Chain<T>::size() {
-//    return sizeof(chain_cards)/sizeof(T);
-//}
 
 template<typename T>
 ostream& operator <<(ostream& out, const T& card) {
