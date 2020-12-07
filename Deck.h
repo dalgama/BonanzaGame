@@ -19,12 +19,15 @@ class Deck : public vector<Card*> {
     public:
         /* Constructor which accepts an istream and reconstruct the Deck from file.*/
         Deck(istream&, const CardFactory*);
+        Deck() {};
         /* Returns and removes the top card from the deck */
         Card* draw();
         /* Returns the deck */
         Deck getDeck();
-        Deck(const CardFactory*);
-        Deck();
+        /*Destructor*/
+        ~Deck() {};
+        //prints the deck to the output stream
+        friend void print(std::ostream&, Deck&);
 };
 
 #endif // DECK_H

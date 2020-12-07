@@ -22,6 +22,10 @@ class DiscardPile {
         Card* top();
         /* To insert all the cards in the DiscardPile to an ostream.*/
         void print(ostream&);
+        /*Destructor*/
+        ~DiscardPile() {};
+        /* To insert top card in the DiscardPile to an ostream.*/
+        friend void print(ostream&, DiscardPile);
     private:
         /*Stores all the card in the Discard pile.*/
         vector<Card*> discard_pile;

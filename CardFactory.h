@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "Deck.h"
+#include <time.h>
 
 using namespace std;
 
@@ -21,14 +22,13 @@ using namespace std;
 class CardFactory {
 	public:
 		/* Returns a pointer to the only instance of CardFactory*/
-		static CardFactory* getFactory();
+		static CardFactory* getFactory(istream& in);
 		/* Returns a deck with all 104 bean cards.*/
 		Deck getDeck();
-		/* Destory the card factory*/
+		/* Destory the cardFactory*/
 		~CardFactory();
 	private:
-		CardFactory();
+		CardFactory(istream& in);
 		Deck* currentDeck = nullptr;
-		const CardFactory* current;
 };
 #endif

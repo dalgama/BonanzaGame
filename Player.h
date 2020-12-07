@@ -29,30 +29,36 @@ class Player {
 		Player(string&);
 		/* Constructor which accepts an istream and reconstruct the Player from file. */
 		Player(istream&, const  CardFactory*);
-		/*Destroy Player*/
-		~Player();
-		/* Get the name of the player.*/
+		/*Get the name of the player.*/
 		std::string getName();
-		/* Get the number of coins currently held by the player. */
+		/*Get the number of coins currently held by the player. */
 		int getNumCoins();
-		/* Add a number of coins */
+		/*Add a number of coins */
 		Player& operator+=(int);
-		/* Returns either 2 or 3*/
+		/*Returns either 2 or 3*/
 		int getMaxNumChains();
-		/* Returns the number of non-zero chains. */
+		/*Returns the number of non-zero chains. */
 		int getNumChains();
-		/* Returns the chain at position i.*/
+		/*Returns the chain at position i.*/
 		Chain<Card*>& operator[](int i);
-		/* Adds a empty third chain to the player for three coins. The function reduces the coin count for the player by two.
-           If the player does not have enough coins then an exception NotEnoughCoins is thrown.*/
+		/*Adds a empty third chain to the player for three coins. The function reduces the coin count for the player by two.
+          If the player does not have enough coins then an exception NotEnoughCoins is thrown.*/
 		void buyThirdChain();
-		/* Prints the top card of the player's hand (with arguement false) or all player's hand (with argument true) to the supplied ostream.*/
+		/*Prints the top card of the player's hand (with arguement false) or all player's hand (with argument true) to the supplied ostream.*/
 		void printHand(ostream& out, bool b);
-		/* Called when you can to sell a chain.*/
-		//void sellChain(Chain<Card*>);
-		Hand* players_hand;
-		vector<Chain<Card*>> currChains;
+		/*Returns players hand.*/
+		Hand* getPlayersHand() { return players_hand; }
+		/*Returns players chain*/
+		vector<Chain<Card*>> getChain() { return currChains; }
+		/*destructor*/
+		~Player();
+		/* Prints players name, number of coins and number or cards in each chain with it's first letter.*/
+		friend ostream& operator<<(ostream& out,const Player& player);
+		
+
 	private:
+		vector<Chain<Card*>> currChains;
+		Hand* players_hand;
 		std::string players_name;
 		int numCoins = 0;
 		int numChains = 2;

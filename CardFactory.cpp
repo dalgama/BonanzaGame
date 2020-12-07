@@ -3,9 +3,9 @@
 /*
 * This constructor creates all the 104 bean cards in the game and stories it in a vector and shuffles the cards in the vector.
 */
-CardFactory::CardFactory() {
+CardFactory::CardFactory(istream& in) {
 	if (currentDeck == nullptr) {
-		currentDeck = new Deck(this);
+		currentDeck = new Deck(in,this);
 	}
 
 	for (int i = 0; i < 104; i++) {
@@ -42,7 +42,7 @@ CardFactory::CardFactory() {
 			currentDeck->push_back(new garden());
 		}
 	}
-	srand(time(NULL));
+	srand(unsigned int(time(NULL)));
 	for (int i = 0; i < 104; i++) {
 		int x = rand() % 104;
 		Card* temp = currentDeck->at(i);
@@ -54,8 +54,8 @@ CardFactory::CardFactory() {
 /*
 * This function returns the only CardFactory pointer the is created.
 */
-CardFactory* CardFactory::getFactory() {
-	static CardFactory* current = new CardFactory();
+CardFactory* CardFactory::getFactory(istream& in) {
+	static CardFactory* current = new CardFactory(in);
 	return current;
 }
 

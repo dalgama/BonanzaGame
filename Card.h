@@ -19,6 +19,8 @@ class Card {
 		virtual string getName() = 0;
 		/* To inserts the first chacacter of the card to an ostream.*/
 		virtual void print(ostream& out) = 0;
+		/* Destroyer */
+		virtual ~Card() {};
 	protected:
 		string name;
 		int score[5] = {};
