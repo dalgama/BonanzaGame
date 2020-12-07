@@ -7,12 +7,12 @@
 
 using namespace std;
 
-/*NOTE: My partner I am couldn't finish the Main because we ran in to an issue calling and adding to the chain therefore we could continue the steps after
+/*NOTE: My partner and I couldn't finish the Main because we ran in to an issue calling and adding to the chain therefore we couldn't continue the steps after
 *		since it requires information from the steps above but we provided the skeleton of what the main should look like providing as much information as possible. 
 *       Other than this all the functions for all the classes are implemented as mentioned in the project instructions.
 * 
 *      Group Members: Dilanga Algama (8253677).
-*                     Xiaoxi Jia (300000227).
+*		                            Xiaoxi Jia (300000227).
 */
 
 int main() {
