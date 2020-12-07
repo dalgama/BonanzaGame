@@ -152,7 +152,7 @@
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="DiscardPile.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Table.cpp" />
