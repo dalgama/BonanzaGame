@@ -19,3 +19,10 @@ Card* Deck::draw() {
 Deck Deck::getDeck() {
     return *this;
 }
+
+/*prints the deck to the output stream*/
+void print(std::ostream& out, Deck &d) {
+    for (int i = 0; i < (int)d.size(); ++i) {
+        d.at(i)->print(out);
+    }
+}

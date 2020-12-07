@@ -23,13 +23,19 @@ using namespace std;
 template<class T>
 class Chain {
     public:
+        /*Constructor*/
         Chain(istream&, const CardFactory*);
+        /*Adds cards to the Chain*/
         Chain<T>& operator+=(Card*);
+        /*Sells the chain*/
         int sell();
-        friend ostream& operator << (ostream & out, const T& card);
-        //int size();
+        /*Getter for the chain.*/
+        vector<T> getChain() { return chain_cards; }
+        /*Destructor*/
+        ~Chain() {};
+        /* Prints the Card name and the number of the card in the chain with the cards first letter.*/
+        friend ostream& operator << (ostream & out, const Chain& chain);  
     private:
-        vector<T*> chain_cards;
+        vector<T> chain_cards;
 };
-
 #endif

@@ -2,7 +2,7 @@
 
 /* Constructor which accepts an istream and reconstruct the Discarpile from file.*/
 DiscardPile::DiscardPile(istream& in, const CardFactory* set) {
-    // TODO: implementation
+
 }
 
 /* Discards the card to the pile */
@@ -29,9 +29,14 @@ Card* DiscardPile::top() {
 /* To insert all the cards in the DiscardPile to an ostream.*/
 void DiscardPile::print(ostream& out) {
     out << "Discard Pile [ ";
-    for (auto& card : discard_pile) {
+    for (auto& card : this->discard_pile) {
         card->print(out);
         cout << " ";
     }
     out << "]" << endl;
+}
+
+/* To insert top card in the DiscardPile to an ostream. */
+void print(ostream& out, DiscardPile dp) {
+    out << "Top Card of DiscardPile: " << dp.top() << "." << endl;
 }
